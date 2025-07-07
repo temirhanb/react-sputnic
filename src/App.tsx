@@ -1,14 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {ListItems} from "./modules";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
+    <div className={'shadow-md m-10 rounded-md border-2 border-gray-300'}>
+      <ListItems/>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
