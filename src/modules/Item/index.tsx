@@ -1,5 +1,6 @@
 import React from "react";
 import {type TItem} from "../../assets";
+import {useItemHook} from "./hook/useItemHook";
 
 export const Items: React.FC<TItem> = (
   {
@@ -8,10 +9,8 @@ export const Items: React.FC<TItem> = (
     price,
     origin
   }) => {
+  const {correctPrice} = useItemHook(price);
 
-  const correctPrice = new Intl.NumberFormat("ru-RU", {style: "currency", currency: price.currency}).format(
-    price.count / 100,
-  );
   return (
     <div className={"shadow-md p-5 flex flex-col m-2"}>
       <h1 className={"text-lg font-bold"}>Название: {title}</h1>
