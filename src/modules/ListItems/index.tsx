@@ -15,7 +15,7 @@ export const ListItems = () => {
       id: 2,
       title: "items2",
       origin: "EU",
-      price: {count: 30000, currency: "EU"},
+      price: {count: 30000, currency: "EUR"},
       image: "https://merriam-webster.com/assets/mw/images/gallery/gal-wap-slideshow-slide/assorted%20fruit%20photo-6825-8b8e196d9d5fd4470911d69ad25fa5e0@2x.jpg"
 
     },
@@ -29,7 +29,7 @@ export const ListItems = () => {
     }
   ]);
   return (
-    <div className={"grid grid-cols-2"}>
+    <div className={"grid sm:grid-cols-1 md:grid-cols-2 "}>
       {items.map(item => (<Items key={item.id}{...item}/>))}
     </div>
   );
